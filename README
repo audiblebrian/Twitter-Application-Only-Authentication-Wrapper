@@ -1,2 +1,27 @@
-Hello World!
-<b>I said hello!</b>
+To get started, simply include this wrapper in your php script:
+	require_once('TwitterAppOnlyAuthWrapper.php');
+	
+
+	
+If you haven't already, you'll need to obtain your Twitter credentials from dev.twitter.com by registering an application.  Then, declare your Twitter object, as such:
+	$oauth_access_token = "YOUR OAUTH TOKEN HERE";
+	$oauth_access_token_secret = ""YOUR OAUTH TOKEN SECRET HERE";
+	$consumer_key = "YOUR CONSUMER KEY HERE";
+	$consumer_secret = "YOUR CONSUMER SECRET HERE";
+
+	$twitter = new TwitterAppOnlyAuthWrapper($oauth_access_token, $oauth_access_token_secret, $consumer_key, $consumer_secret);
+	
+	
+
+Lastly, you'll need to authorize the object, once.  After you authorize it, you are free to use the simple methods provided to retrieve tweets and info:
+
+	if($twitter->authorize())
+	{
+		// your methods here
+	}
+
+	
+	
+For examples on how to use the methods, please see the fully operational demo WrapperUsage.php.  Please note that the methods return the full JSON response provided by Twitter.  This was done so that you can do whatever you'd like with the data.  JSON is easily handled with php & jQuery.  For documentation and examples on those topics, please see:
+jQuery AJAX:  http://api.jquery.com/category/ajax/
+PHP JSON:  http://php.net/manual/en/book.json.php
