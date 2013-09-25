@@ -1,3 +1,6 @@
+Please see my blog for questions/comments, as well as a full tutorial on how I developed this solution and how to use it on a real site.  Thanks for checking out the project. 
+http://blog.audibleagency.com
+
 To get started, simply include this wrapper in your php script:
 	require_once('TwitterAppOnlyAuthWrapper.php');
 	
